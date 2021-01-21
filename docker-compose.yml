@@ -1,0 +1,10 @@
+---
+version: '3'
+services:
+  db:
+    image: postgres:11.10
+    ports:
+      - "5432:5432"
+    environment:
+      # https://github.com/docker-library/docs/blob/cf89f210/postgres/content.md#postgres_host_auth_method
+      - POSTGRES_HOST_AUTH_METHOD=trust
